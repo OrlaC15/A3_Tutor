@@ -9,7 +9,9 @@ class ArithmeticTutor<Player
  end
 
  def start_game_msg
-    puts "Welcome to Arithmetic Tutor #{@name} "
+    puts "Welcome to Arithmetic Tutor #{@name}"
+    puts "\nNumber of questions to generate #{@amount_of_questions}"
+    puts "\nThe seed #{@seed}"
  end
 
  def  is_game_over?
