@@ -1,31 +1,34 @@
+require_relative 'question_list.rb'
 require_relative 'player.rb'
-class ArithmeticTutor<Player
- def initialize(name, amount_of_questions, seed)
-  super name
-   @amount_of_questions = amount_of_questions
-  @seed = seed
-  @questions = QuestionList.new
+class ArithmeticTutor < Player
 
- end
+  attr_accessor :user_answer
+  attr_reader :number_of_questions
 
- def start_game_msg
-    puts "Welcome to Arithmetic Tutor #{@name}"
-    puts "\nNumber of questions to generate #{@amount_of_questions}"
-    puts "\nThe seed #{@seed}"
- end
-
- def  is_game_over?
-
+  def initialize (name, number_of_questions, seed)
+    super name
+    @right=0
+    srand(seed)
+    @number_of_questions = number_of_questions
+    @questions = QuestionList.new
   end
 
- def ask_question
-
- end
- def get_user_answer
- end
- def check_answer
- end
-  def print_results
-
+  def start_game_msg
+    puts "Welcome to the Arithmetic Tutor,#{@name}\n"
   end
+
+  def ask_question
+    @questions.make_questions
+    puts @questions.last.print_questions
   end
+
+  def get_answer
+    @user_answer = gets.chomp.to_i
+  end
+
+
+  def results
+    puts "Game Over You got #{@right} questions out of 10 correct"
+  end
+
+end
