@@ -26,6 +26,23 @@ class ArithmeticTutor < Player
     @user_answer = gets.chomp.to_i
   end
 
+  def is_correct?
+    if @user_answer == @questions.answer
+      @user_answer = :Correct
+      @right = @right+1
+    else
+      @user_answer = :Incorrect
+    end
+    @number_of_questions-=1
+  end
+
+  def is_game_over?
+    if @number_of_questions<=0
+      true
+    else
+      false
+    end
+  end
 
   def results
     puts "Game Over You got #{@right} questions out of 10 correct"

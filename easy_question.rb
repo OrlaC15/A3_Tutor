@@ -1,9 +1,9 @@
 require_relative 'question.rb'
 class EasyQuestion<Question
   def initialize
-    super
     @range = rand(1...10)
     @addition = '+'
+    super
   end
 
   def make_questions
