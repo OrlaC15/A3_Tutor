@@ -1,0 +1,2 @@
+class MediumQuestion
+end
