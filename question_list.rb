@@ -1,8 +1,18 @@
 module Calculator
   def answer
-       result = self.last.x + self.last.y
+    case self.last.operation
+ when '*'
+   results = self.last.x * self.last.y
+      when '/'
+        results =  self.last.x / self.last.y
+      when '+'
+        results = self.last.x * self.last.y
+      when '-'
+        results =  self.last.x / self.last.y
+    end
+    results
   end
-end
+  end
 
 class QuestionList
   include Calculator
@@ -13,7 +23,7 @@ class QuestionList
   end
 
   def make_questions
-    @questions << MediumQuestion.new
+    @questions << HardQuestion.new
 
   end
 
