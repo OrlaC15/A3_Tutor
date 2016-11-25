@@ -22,9 +22,17 @@ class QuestionList
     @questions = []
   end
 
-  def make_questions
-    @questions << HardQuestion.new
+  def make_questions(level_number)
 
+    case level_number
+      when 1
+        @questions << EasyQuestion.new
+      when 2
+        @questions << MediumQuestion.new
+      when 3
+        @questions << HardQuestion.new
+    end
+    
   end
 
   def each
