@@ -6,10 +6,6 @@ class EasyQuestion<Question
     super
   end
 
-  def make_questions
-    @x = rand(@range)
-    @y = rand(@range)
-    @operation = @addition
-  end
+
 
 end
