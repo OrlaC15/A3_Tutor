@@ -1,6 +1,7 @@
 require_relative 'question.rb'
 require_relative 'arithmetic_tutor.rb'
 require_relative 'question_list.rb'
+require_relative 'medium_question.rb'
 require_relative 'easy_question.rb'
 require_relative 'player.rb'
 

@@ -13,7 +13,7 @@ class QuestionList
   end
 
   def make_questions
-    @questions << EasyQuestion.new
+    @questions << MediumQuestion.new
 
   end
 
