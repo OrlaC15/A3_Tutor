@@ -10,8 +10,8 @@ class ArithmeticTutor < Player
 
   def initialize (name,number_of_questions,seed)
     super name
-    srand(seed)
     @number_of_questions = number_of_questions
+    srand(seed)
     @questions = QuestionList.new
     @statistics = ScoreBoard.new
     @stage = Stage.new 1, 3
@@ -20,8 +20,7 @@ class ArithmeticTutor < Player
   end
 
   def start_game_msg
-    puts "Welcome to the Arithmetic Tutor,#{@name}\n
-   Here are your #{@number_of_questions} questions "
+    puts "Welcome to the Arithmetic Tutor,#{@name}\nHere are your #{@number_of_questions} questions "
   end
 
   def ask_question
@@ -62,7 +61,7 @@ class ArithmeticTutor < Player
   end
 
   def add_result
-    @statistics.add @questions.last.to_s, @this_answer
+    @statistics.add @questions.last.print_questions, @this_answer
   end
 
   def is_game_over?
