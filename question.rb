@@ -8,11 +8,13 @@ class Question
   def print_questions
     "What is #{@x} #{@operation} #{@y} ?"
   end
-
+  def roll
+    Random.rand(2)
+  end
   def make_questions
     @x = rand(@range)
     @y = rand(@range)
-    number= rand(2)
+    number= roll
     case number
       when 0
         @operation = @first_operator

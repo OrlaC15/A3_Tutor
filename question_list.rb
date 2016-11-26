@@ -1,18 +1,23 @@
+require_relative 'question.rb'
+require_relative 'easy_question.rb'
+require_relative 'medium_question.rb'
+require_relative 'hard_question.rb'
+
 module Calculator
   def answer
     case self.last.operation
- when '*'
-   results = self.last.x * self.last.y
+      when '*'
+        results = self.last.x * self.last.y
       when '/'
-        results =  self.last.x / self.last.y
+        results = self.last.x / self.last.y
       when '+'
         results = self.last.x * self.last.y
       when '-'
-        results =  self.last.x / self.last.y
+        results = self.last.x / self.last.y
     end
     results
   end
-  end
+end
 
 class QuestionList
   include Calculator
