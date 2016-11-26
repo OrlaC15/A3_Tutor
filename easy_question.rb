@@ -1,13 +1,13 @@
 require_relative 'question.rb'
-class EasyQuestion<Question
+class EasyQuestion < Question
   def initialize
-    @range = rand(1...10)
-    @first_operator = '+'
+    @range = (1..9)
+    @first_operation = '+'
     super
   end
-  def roll
-    Random.rand(1)
+  def make_question
+    @x = rand(@range)
+    @y = rand(@range)
+    @operation = @first_operation
   end
-
-
 end
