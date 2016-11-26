@@ -8,8 +8,9 @@ class Player
       ask_question
       get_answer
       is_correct?
+      check_level?
+
     end
-    printed_sorted_results
-    results
+    print_all_stats
   end
 end

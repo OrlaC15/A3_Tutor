@@ -1,4 +1,5 @@
 class ScoreBoard
+  include Enumerable
   attr_reader :statistics
   def initialize
     @statistics = Hash.new
