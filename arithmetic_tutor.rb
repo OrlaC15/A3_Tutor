@@ -11,6 +11,7 @@ class ArithmeticTutor < Player
     srand(seed)
     @number_of_questions = number_of_questions
     @questions = QuestionList.new
+    @statistics = ScoreBoard.new
   end
 
   def start_game_msg
@@ -34,6 +35,8 @@ class ArithmeticTutor < Player
       @user_answer = :Incorrect
     end
     @number_of_questions-=1
+
+    add_to scoreboard
   end
 
   def is_game_over?
@@ -43,6 +46,10 @@ class ArithmeticTutor < Player
       false
     end
   end
+  def add_to_scoreboard
+    @statistics.add @question_list.last.to_s, @user_answer
+  end
+
 
   def results
     puts "Game Over You got #{@right} questions out of 10 correct"

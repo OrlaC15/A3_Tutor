@@ -32,7 +32,7 @@ class QuestionList
       when 3
         @questions << HardQuestion.new
     end
-    
+
   end
 
   def each
