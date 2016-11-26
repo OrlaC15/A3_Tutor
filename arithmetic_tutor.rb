@@ -1,7 +1,6 @@
 require_relative 'question_list.rb'
 require_relative 'stage.rb'
 require_relative 'score_board.rb'
-
 require_relative 'player.rb'
 
 class ArithmeticTutor < Player
