@@ -49,4 +49,9 @@ class QuestionList
   def last
     @questions.last
   end
+  def to_string
+    self.each do |question|
+      question.to_s
+    end
+    end
 end

@@ -9,6 +9,7 @@ class Player
       get_answer
       is_correct?
     end
+    printed_sorted_results
     results
   end
 end
