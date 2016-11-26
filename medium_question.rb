@@ -1,9 +1,10 @@
 require_relative 'question.rb'
-class MediumQuestion< Question
+class MediumQuestion < Question
   def initialize
-    @range = rand(1...10)
-    @first_operator = '+'
-    @second_operator ='-'
+    @range = (10..99)
+    @first_operation = '+'
+    @second_operation = '-'
     super
   end
+
 end
