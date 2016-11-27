@@ -10,4 +10,12 @@ class ArithmeticTutorTest<Test::Unit::TestCase
     @player.is_correct?
     assert(@player.this_answer==:Correct, 'Test check answer method error')
   end
- end
+     def test_is_game_over
+      4.times do
+        @player.this_answer = :Correct
+        @player.last_answer = :Correct
+        @player.check_level?
+      end
+      assert(@player.is_game_over?, 'Game over method not working')
+    end
+  end
