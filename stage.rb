@@ -1,5 +1,6 @@
 class Stage
   attr_reader :stage
+
   def initialize (start_level, end_level)
     @end_level = end_level
     @start_level = start_level
@@ -13,6 +14,7 @@ class Stage
       @stage = @start_level
     end
   end
+
   def level_up
     if @stage<@end_level
       @stage+=1

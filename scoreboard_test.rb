@@ -14,12 +14,8 @@ class ScoreboardTest<Test::Unit::TestCase
 
   def test_sort
     @statistics.add 'What is 1 + 2?', :Correct
-
     not_sorted = [["What is 1+ 1?", "InCorrect"],["What is 1 + 2?", "Correct"], ["What is 5 + 4?", "Incorrect"]]
     assert(!(@statistics.sort.eql?(not_sorted)), 'Error Not Sorting ')
   end
-  def test_to_s
-    str="Your results where as follows:"+"\n"+'What is 1 + 2?'+'Correct'+"\n"+'What is 1 + 4?'+'Incorrect'
-    assert(@statistics.to_s==str, 'To_s method not working')
-  end
+
 end

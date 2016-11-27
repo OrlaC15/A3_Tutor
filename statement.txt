@@ -1,4 +1,8 @@
 Orla Cullen 14708689
 
-Program works
-Still working onb tests
+The program works as it should
+increases level if 2 consecutive question are right
+decreases level if 2 consecutive question are wrong
+has 3 levels of questions
+
+Test cases are also included

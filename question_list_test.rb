@@ -1,23 +1,20 @@
 require 'test/unit'
-
-class QuestionListTest < Test::Unit::TestCase
-
-  # Called before every test method runs. Can be used
-  # to set up fixture information.
+require_relative 'question_list.rb'
+class QuestionListTest <Test::Unit::TestCase
   def setup
-    # Do nothing
+    @questions = QuestionList.new
+    srand(1234)
   end
 
-  # Called after every test method runs. Can be used to tear
-  # down fixture information.
-
-  def teardown
-    # Do nothing
+  def test_last
+    @questions.make_question 1
+    assert(@questions.last==@questions.questions.last, 'Error Last method not working')
   end
 
-  # Fake test
-  def test_fail
-
-    fail('Not implemented')
+  def test_calculator_module
+    @questions.make_question 1
+    result = 4+7
+    assert(result == @questions.answer, 'Error Calculator module no working')
   end
+
 end
