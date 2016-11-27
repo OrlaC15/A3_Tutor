@@ -1,23 +1,13 @@
 require 'test/unit'
-
-class AirthmeticTutorTest < Test::Unit::TestCase
-
-  # Called before every test method runs. Can be used
-  # to set up fixture information.
+require_relative 'arithmetic_tutor'
+class ArithmeticTutorTest<Test::Unit::TestCase
   def setup
-    # Do nothing
+    @player= ArithmeticTutor.new 'John',4,1234
   end
-
-  # Called after every test method runs. Can be used to tear
-  # down fixture information.
-
-  def teardown
-    # Do nothing
+  def test_check_answer
+    @player.ask_question
+    @player.this_answer=11
+    @player.is_correct?
+    assert(@player.this_answer==:Correct, 'Test check answer method error')
   end
-
-  # Fake test
-  def test_fail
-
-    fail('Not implemented')
-  end
-end
+ end
