@@ -5,9 +5,9 @@ require_relative 'player.rb'
 
 class ArithmeticTutor < Player
   attr_accessor :this_answer, :last_answer
-  attr_reader :number_of_questions,:stage
+  attr_reader :number_of_questions, :stage, :score
 
-  def initialize (name,number_of_questions,seed)
+  def initialize (name, number_of_questions, seed)
     super name
     @number_of_questions = number_of_questions
     srand(seed)
@@ -39,7 +39,7 @@ class ArithmeticTutor < Player
 
   def check_level?
     if @this_answer==@last_answer
-      if   @this_answer==:Correct
+      if @this_answer==:Correct
         @stage.level_up
       else
         @stage.level_down
@@ -52,7 +52,7 @@ class ArithmeticTutor < Player
   end
 
   def score
-    if  @this_answer == :Correct
+    if @this_answer == :Correct
       update_score @stage.stage
     else
       update_score 0
@@ -64,7 +64,7 @@ class ArithmeticTutor < Player
   end
 
   def is_game_over?
-    if  @number_of_questions<=0
+    if @number_of_questions<=0
       true
     else
       false
@@ -75,6 +75,7 @@ class ArithmeticTutor < Player
     puts @statistics.to_s
     puts to_s
   end
+
   def update_score number
     @points+=number
   end

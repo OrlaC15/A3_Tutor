@@ -2,6 +2,7 @@ class Player
   def initialize name
     @name = name
   end
+
   def play_game
     start_game_msg
     while !is_game_over?

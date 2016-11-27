@@ -5,6 +5,7 @@ class EasyQuestion < Question
     @first_operation = '+'
     super
   end
+
   def make_question
     @x = rand(@range)
     @y = rand(@range)

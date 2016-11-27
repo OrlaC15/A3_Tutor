@@ -9,5 +9,5 @@ require_relative 'score_board.rb'
 require_relative 'stage.rb'
 
 data = IO.readlines('tutor.dat')
-player=ArithmeticTutor.new  data[0], data[1].to_i, data[2].to_i
+player=ArithmeticTutor.new data[0], data[1].to_i, data[2].to_i
 player.play_game

@@ -6,5 +6,4 @@ class MediumQuestion < Question
     @second_operation = '-'
     super
   end
-
 end
